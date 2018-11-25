@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "2968"// البرفكس هنا
+var prefix = "#"// البرفكس هنا
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -34,8 +34,8 @@ client.on('ready', () => {
  
  client.on('ready',async () => {
 console.log("Starting..");
-let g = client.guilds.get("499633648866164737");
-let c = g.channels.get("500651445327233034");
+let g = client.guilds.get("507500031994101763");
+let c = g.channels.get("507858813844717579");
 if(c.type === 'voice') {
 c.join();
 setInterval(() => {
@@ -47,13 +47,13 @@ console.log("Failed To Join:\n The Channel Type isn't \"text\"");
 });
  
  
-const adminprefix = "2968";
-const devs = ['506211849100984320'];
+const adminprefix = "#";
+const devs = ['323160008411971585'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
    
-if (message.content.startsWith(adminprefix + 'setgame')) {
+if (message.content.startsWith(adminprefix + 'ply')) {
   client.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
 } else
