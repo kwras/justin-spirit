@@ -49,11 +49,6 @@ console.log("Failed To Join:\n The Channel Type isn't \"text\"");
  
 
 
-client.on('ready', () => {
-console.log(`Logged in as ${client.user.tag}!`);
-});
-
-var prefix = "#"
 
 client.on('message', function(message) {
     const myID = "323160008411971585";
