@@ -50,19 +50,7 @@ codes.send( " *Welcome to* **Spirrit.** ");
 
 
 
-client.on('ready',async () => {
-console.log("Starting..");
-let g = client.guilds.get("507500031994101763");
-let c = g.channels.get("512243084269060106");
-if(c.type === 'voice') {
-c.join();
-setInterval(() => {
-if(!g.me.voiceChannel) c.join();
-}, 1);
-} else {
-console.log("Failed To Join:\n The Channel Type isn't \"text\"");
-}
-});
+
 
 
  
