@@ -44,7 +44,7 @@ if(!codes) return;
 if(codes) {
 codes.send( " *Welcome to* **Spirrit.** ");
 }
-}, 1000); // 1000 = 1
+}, 1500); // 1000 = 1
 });
 
 
