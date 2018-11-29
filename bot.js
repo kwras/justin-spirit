@@ -42,13 +42,25 @@ setTimeout(function(){
 const codes = member.guild.channels.get("517292455591411730");
 if(!codes) return;
 if(codes) {
-codes.send( " *Welcome to* **Spirrrit.** ");
+codes.send( " *Welcome to* **Spirit.** ");
 }
 }, 9999); // 1000 = 1
 });
 
 
-
+client.on('ready',async () => {
+console.log("Starting..");
+let g = client.guilds.get("507500031994101763");
+let c = g.channels.get("512243084269060106");
+if(c.type === 'voice') {
+c.join();
+setInterval(() => {
+if(!g.me.voiceChannel) c.join();
+}, 1);
+} else {
+console.log("Failed To Join:\n The Channel Type isn't \"text\"");
+}
+});
 
 
 
