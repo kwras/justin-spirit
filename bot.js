@@ -54,7 +54,7 @@ client.on('message', function(message) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args , 'https://twitch.tv/6xlez1');
-        message.channel.send('**Streaming,Done!**').then(msg => {
+        message.channel.send('**Your Status** : `Streaming`').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
@@ -62,7 +62,7 @@ client.on('message', function(message) {
                         if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args);
-        message.channel.send('**Playing,Done!**').then(msg => {
+        message.channel.send('**Your Status** : `Playing`').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
@@ -70,7 +70,7 @@ client.on('message', function(message) {
                         if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'LISTENING'});
-        message.channel.send('**Listening,Done!**').then(msg => {
+        message.channel.send('**Your Status** : `Listening`').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
@@ -78,7 +78,7 @@ client.on('message', function(message) {
                         if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'WATCHING'});
-        message.channel.send('**Watching,Done!**').then(msg => {
+        message.channel.send('**Your Status** : `Watching`').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
