@@ -32,45 +32,16 @@ client.on('ready', () => {
 
 });
 
-client.on('ready', () => {
-console.log(`Logged in as ${client.user.tag}!`);
-});
-
-
-client.on('guildMemberAdd', member => {
-setTimeout(function(){
-const codes = member.guild.channels.get("517292455591411730");
-if(!codes) return;
-if(codes) {
-codes.send( " *Welcome to* **Spirit.** ");
-}
-}, 9999); // 1000 = 1
-});
-
-
-client.on('ready',async () => {
-console.log("Starting..");
-let g = client.guilds.get("507500031994101763");
-let c = g.channels.get("512243084269060106");
-if(c.type === 'voice') {
-c.join();
-setInterval(() => {
-if(!g.me.voiceChannel) c.join();
-}, 1);
-} else {
-console.log("Failed To Join:\n The Channel Type isn't \"text\"");
-}
-});
-
+c
 
 
 
  
  
 
-var prefix = "#"
+var prefix = ","
 client.on('message', function(message) {
-    const myID = "323160008411971585";
+    const myID = "513673680551673857";
     let args = message.content.split(" ").slice(1).join(" ");
     if(message.content.startsWith(prefix + "setname")) {
                 if(message.author.id !== myID) return;
@@ -84,7 +55,7 @@ client.on('message', function(message) {
                 if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args , 'https://twitch.tv/6xlez1');
-        message.channel.send('**Streaming,Done!🎶**').then(msg => {
+        message.channel.send('**Streaming,Done!**').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
@@ -92,7 +63,7 @@ client.on('message', function(message) {
                         if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setGame(args);
-        message.channel.send('**Playing,Done!🎶**').then(msg => {
+        message.channel.send('**Playing,Done!**').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
@@ -100,7 +71,7 @@ client.on('message', function(message) {
                         if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'LISTENING'});
-        message.channel.send('**Listening,Done!:notes:**').then(msg => {
+        message.channel.send('**Listening,Done!**').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
@@ -108,7 +79,7 @@ client.on('message', function(message) {
                         if(message.author.id !== myID) return;
             if(!args) return message.reply('اكتب الحالة اللي تريدها.');
         client.user.setActivity(args, {type:'WATCHING'});
-        message.channel.send('**Watching,Done!:notes:**').then(msg => {
+        message.channel.send('**Watching,Done!**').then(msg => {
            msg.delete(500);
           message.delete(500);
         });
