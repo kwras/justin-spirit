@@ -32,7 +32,6 @@ client.on('ready', () => {
 
 });
 
-c
 
 
 
